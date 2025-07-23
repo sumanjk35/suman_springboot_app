@@ -8,7 +8,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.4</version>
 	</parent>
-	<groupId>com.suman></groupId>
+	<groupId>com.infy></groupId>
 	<artifactId>suman_springboot_app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>suman_springboot_app</name>
