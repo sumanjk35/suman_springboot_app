@@ -20,7 +20,7 @@ import com.suman.exception.InfyBankException;
 import com.suman.service.CustomerService;
 
 @RestController
-@RequestMapping(value = "/infybank")
+@RequestMapping(value = "/sumanbank")
 public class CustomerAPI {
 
 	@Autowired

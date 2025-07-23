@@ -26,7 +26,7 @@ public class SecurityConfig {
 
 	@Bean
 	public InMemoryUserDetailsManager userDetailsService() {
-		UserDetails user = User.withUsername("smith").password(passwordEncoder().encode("smith123")).roles("ADMIN").build();
+		UserDetails user = User.withUsername("suman").password(passwordEncoder().encode("suman123")).roles("ADMIN").build();
 		UserDetails admin = User.withUsername("tim").password(passwordEncoder().encode("tim123")).roles("USER").build();
 		return new InMemoryUserDetailsManager(user, admin);
 	}
@@ -34,10 +34,10 @@ public class SecurityConfig {
 	// authorization
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		String requestMatcher = "/infybank/customers/**";
+		String requestMatcher = "/sumanbank/customers/**";
 		http.httpBasic(Customizer.withDefaults())
-		.authorizeHttpRequests((authorize) -> authorize.requestMatchers(HttpMethod.GET, requestMatcher)
-		.permitAll().requestMatchers(HttpMethod.PUT, requestMatcher).hasAnyRole("ADMIN", "USER")
+		.authorizeHttpRequests((authorize) -> authorize.requestMatchers(HttpMethod.GET, requestMatcher).hasRole("ADMIN")
+		.requestMatchers(HttpMethod.PUT, requestMatcher).hasAnyRole("ADMIN", "USER")
 		.requestMatchers(HttpMethod.POST, requestMatcher).hasRole("ADMIN")
 		.requestMatchers(HttpMethod.DELETE, requestMatcher).hasRole("ADMIN").anyRequest().authenticated());
 		http.csrf(csrf -> csrf.disable());

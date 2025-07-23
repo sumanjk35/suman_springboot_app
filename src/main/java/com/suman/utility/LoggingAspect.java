@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 public class LoggingAspect {
 	public static final Logger LOGGER = LogManager.getLogger(LoggingAspect.class);
 
-	@AfterThrowing(pointcut = "execution(* com.infy.service.*Impl.*(..))", throwing = "exception")
+	@AfterThrowing(pointcut = "execution(* com.suman.service.*Impl.*(..))", throwing = "exception")
 	public void logServiceException(Exception exception) throws Exception {
 		LOGGER.error(exception.getMessage(), exception);
 	}
