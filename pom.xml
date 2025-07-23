@@ -8,11 +8,11 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.4</version>
 	</parent>
-	<groupId>com.infy</groupId>
-	<artifactId>Demo02_SpringSecurity</artifactId>
+	<groupId>com.suman></groupId>
+	<artifactId>suman_springboot_app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Demo02_SpringSecurity</name>
-	<description>Demo for Spring Security</description>
+	<name>suman_springboot_app</name>
+	<description>Demo for Spring Boot App</description>
 
 	<properties>
 		<java.version>21</java.version>
@@ -47,8 +47,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>provided</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -79,9 +83,9 @@
 	</dependencies>
 
 	<build>
+		<finalName>suman_springboot_app</finalName>
 		<plugins>
-			<plugin>
-			
+			<plugin>			
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
