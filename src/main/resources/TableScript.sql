@@ -1,6 +1,4 @@
-drop database if exists customer_db;
-create database customer_db;
-use  customer_db;
+use  mynewwebapp-database;
 
 
 create table customer(
