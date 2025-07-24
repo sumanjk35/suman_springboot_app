@@ -20,6 +20,7 @@
         <java.version>17</java.version>
         <log4j2.version>2.19.0</log4j2.version>
     </properties>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
@@ -83,6 +84,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
         </plugins>
     </build>
