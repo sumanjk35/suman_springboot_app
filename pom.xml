@@ -10,7 +10,7 @@
         <version>3.2.4</version>
     </parent>
     
-    <groupId>com.sunam</groupId>
+    <groupId>com.suman</groupId>
     <artifactId>demo-spring-rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>DemoSpringRestApplication</name>
